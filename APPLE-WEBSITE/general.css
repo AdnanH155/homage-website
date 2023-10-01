@@ -1,0 +1,363 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "PT Sans-regular";
+}
+/* FONTS */
+@font-face {
+  font-family: "Sans-regular";
+  src: url("/sans-regular-fonts/InclusiveSans-Regular.woff2") format(woff2),
+    url("/sans-regular-fonts/InclusiveSans-Regular.woff2") format(woff2);
+}
+@font-face {
+  font-family: "PT Sans-regular";
+  src: url("/fonts/PTSans-Regular.woff2") format(woff2),
+    url("fonts/PTSans-Regular.woff2") format(woff2);
+}
+
+header {
+  background-color: rgb(21, 22, 22);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+}
+/* MOBILE */
+
+p {
+  font-size: 18px;
+}
+
+header > svg {
+  width: 25%;
+  filter: invert(100%);
+}
+
+nav {
+  display: none;
+  padding-left: 12%;
+  font-size: 31px;
+}
+nav > a {
+  color: white;
+}
+header > svg:nth-child(4):hover + nav {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header > svg:nth-child(4):hover {
+  transform: rotate(90deg);
+  transition: transform 1s;
+}
+/* main body */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 35px;
+}
+
+.iphone-15-pro {
+  background-image: url("/images/iphone-15-pro-background-mobile.jpg");
+  color: white;
+}
+.iphone-15 {
+  background-image: url("images/iphone-15-background-mobile.jpg");
+}
+.series-9 {
+  background-image: url("images/apple-watch-series-9-mobile.jpg");
+  color: white;
+}
+.series-9 > h5 {
+  color: red;
+}
+.ultra-2 {
+  background-image: url("images/apple-watch-ultra-2-background-image.jpg");
+  color: black;
+}
+.ultra-2 > h5 {
+  color: orange;
+}
+.airpods-pro {
+  background-image: url("images/airpods-pro-mobile.jpg");
+  color: white;
+}
+.carbon-neutral {
+  background-image: url(images/carbon-neutral-watch-mobile.jpg);
+}
+.save-on-mac {
+  background-image: url(/images/save-money-image.jpg);
+}
+.product {
+  height: 490px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  background-position: center;
+  padding-top: 35px;
+}
+.apple-tv {
+  background-image: url(images/hijack.jpg);
+  width: 290px;
+  margin-right: 0.5%;
+}
+.macbook-air {
+  background-image: url(/images/macbook-air-15.jpg);
+}
+.trade {
+  background-image: url(/images/trade-in-image.jpeg);
+}
+a {
+  color: rgb(78, 141, 249);
+  text-decoration: none;
+  margin-top: 10px;
+}
+.link {
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+}
+/* image size */
+main > div > img {
+  width: 100%;
+}
+main > div > p {
+  padding-top: 7px;
+}
+/* flex */
+main > .wrapper {
+  flex-direction: column;
+  height: fit-content;
+  width: 100%;
+}
+
+footer {
+  background-color: rgb(234, 234, 234);
+  color: grey;
+  padding-top: 20px;
+  margin-top: 20px;
+  padding-bottom: 10px;
+  counter-reset: p;
+}
+.info {
+  font-size: 12px;
+}
+.info::before {
+  counter-increment: p;
+  content: counter(p);
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.circle {
+  margin-top: 5%;
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1200px) {
+  header {
+    background-color: rgb(28, 29, 30);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    padding: 10px;
+  }
+  /* font size for wrap */
+  .wrapper > .ultra-2 > h1 {
+    font-size: 40px;
+  }
+  .wrapper > .ultra-2 > h5 {
+    font-size: 25px;
+  }
+  .wrapper > .ultra-2 > p {
+    font-size: 30px;
+  }
+  .wrapper > .airpods-pro > h1 {
+    font-size: 60px;
+  }
+  .wrapper > .airpods-pro > p {
+    font-size: 30px;
+  }
+  .wrapper > .carbon-neutral > h1 {
+    font-size: 50px;
+  }
+  .wrapper > .carbon-neutral > p {
+    font-size: 27px;
+  }
+  .wrapper > .save-on-mac > h1 {
+    font-size: 50px;
+  }
+  .wrapper > .save-on-mac > p {
+    font-size: 27px;
+  }
+  .wrapper > .trade > h1 {
+    font-size: 45px;
+  }
+  .wrapper > .trade > p {
+    font-size: 27px;
+  }
+  .wrapper > .macbook-air > h1 {
+    font-size: 45px;
+  }
+  .wrapper > .macbook-air > p {
+    font-size: 27px;
+  }
+  /* END */
+  header > .menu > a {
+    font-size: 20px;
+    color: lightgrey;
+    display: flex;
+    justify-content: space-between;
+  }
+  header > svg:nth-child(4) {
+    display: none;
+  }
+
+  header > svg {
+    width: min-content;
+  }
+  nav {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 0%;
+    width: 60%;
+    font-size: 10px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 44px;
+    gap: 15px;
+  }
+  main > div > h1 {
+    font-size: 80px;
+    /* padding-top: 55px; */
+  }
+
+  main > .wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: fit-content;
+    width: 100%;
+  }
+  .wrapper > .product {
+    width: 49%;
+    margin: 0.3%;
+    margin-bottom: 20px;
+    padding-bottom: 545px;
+  }
+  a {
+    font-size: 21px;
+  }
+  .link {
+    width: 27%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .carbon-link {
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  p {
+    font-size: 35px;
+  }
+  /* IMAGES */
+  .iphone-15-pro {
+    background-image: url("images/iphone-15-pro-desktop.jpg");
+    color: white;
+    padding-bottom: 1000px;
+    /* background-size: cover; */
+  }
+  .iphone-15 {
+    background-image: url("images/iphone15-desktop-background.jpg");
+    padding-bottom: 1000px;
+    padding-top: 55px;
+  }
+  .series-9 {
+    background-image: url("/images/applewatch-large-desktop.jpg");
+    color: white;
+    padding-bottom: 1200px;
+  }
+  .ultra-2 {
+    background-image: url("images/ultra-2-large.jpg");
+    color: black;
+  }
+
+  .airpods-pro {
+    background-image: url("images/airpods-large.jpeg");
+    color: white;
+    padding-bottom: 100px;
+    background-size: cover;
+    margin-right: 100px;
+  }
+
+  .carbon-neutral {
+    background-image: url("images/carbon-neutral-large.jpg");
+  }
+  .save-on-mac {
+    background-image: url("/images/save-large.jpg");
+  }
+
+  .macbook-air {
+    background-image: url("/images/macbook-large.jpeg");
+  }
+  .trade {
+    background-image: url("/images/hand-in-large.jpg");
+    background-image: ccontain;
+  }
+  .apple-tv {
+    background-image: url("images/tedlasso-large.jpg");
+    width: 85%;
+    padding-top: 43%;
+  }
+  /* IMAGES END */
+
+  .series-9 > h5 {
+    font-size: 30px;
+  }
+
+  .apple-tv {
+    background-image: url(images/tedlasso-large.jpg);
+    width: 76%;
+    padding-top: 41%;
+  }
+
+  .circle {
+    margin-top: 10px;
+  }
+  .info {
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+  .footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+}
